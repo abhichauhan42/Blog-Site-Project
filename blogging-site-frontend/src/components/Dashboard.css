@@ -1,0 +1,119 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #343a40;
+  color: white;
+  padding: 15px 20px;
+}
+
+.navbar span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar button {
+  color: white;
+  background-color: #495057;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #6c757d;
+}
+
+.blog-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card h3 {
+  margin-top: 0;
+  color: #343a40;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.blog-card p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 10px 0 20px;
+}
+
+.blog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.blog-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.blog-actions button:hover {
+  background-color: #0056b3;
+}
+
+.blog-actions button:last-child {
+  background-color: #dc3545;
+}
+
+.blog-actions button:last-child:hover {
+  background-color: #a71d2a;
+}
+
+.blog-cards-container p {
+  text-align: center;
+  color: #6c757d;
+  font-size: 1.2em;
+  grid-column: 1 / -1; 
+}
+
+@media (max-width: 768px) {
+  .blog-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar button {
+    margin: 5px 0;
+  }
+}
